@@ -7,9 +7,11 @@ var randomNumber = Math.floor(Math.random() * 8);
 // Random eightball message. 
 var eightBall = randomNumber;
 
-// This generates two seperate responses to user input (or a lack of input).
-function greetUser(userName) {
-    return userName ? `hello ${userName}!` : 'Hello!';
+// This generates two seperate responses depending on if a username is given or not.).
+if (userName) {
+    console.log(`Hello, ${userName}`);
+} else {
+    console.log('Hello!');
 }
 
 // This will pring after the user gives us their name nad question. 
@@ -18,6 +20,7 @@ console.log(`Ah! I see ${userName}, you want to know ${userQuestion}.
 Let's have a look...`)
 
 // Switch statement that pairs a response with a random number. 
+console.log(`*Shakes eightball*`);
 switch (eightBall) {
     case 0:
         console.log('For sure, my guy!.');
@@ -44,5 +47,3 @@ switch (eightBall) {
         console.log("It's giving sus vibes.");
         break;
 }
-
-console.log(eightBall);
